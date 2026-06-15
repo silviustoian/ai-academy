@@ -1,5 +1,48 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Sui Generis";
+  src: url("/fonts/SuiGeneris-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sui Generis";
+  src: url("/fonts/SuiGeneris-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sui Generis";
+  src: url("/fonts/SuiGeneris-Heavy.ttf") format("truetype");
+  font-weight: 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nexa";
+  src: url("/fonts/Nexa-Light.otf") format("opentype");
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nexa";
+  src: url("/fonts/Nexa-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nexa";
+  src: url("/fonts/Nexa-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nexa";
+  src: url("/fonts/Nexa-Heavy.otf") format("opentype");
+  font-weight: 900;
+  font-display: swap;
+}
+
 :root {
   --background: #09090b;
   --foreground: #f6f7fb;
@@ -14,6 +57,17 @@
   --accent-foreground: #ffd9dd;
   --brand-blue: #2e62fa;
   --brand-purple: #9b54df;
+  --brand-magenta: #f23fa0;
+  --brand-cyan: #06f0ff;
+  --brand-iris: #d6b3ff;
+  --brand-red: #f23f48;
+  --gradient-iris: linear-gradient(
+    110deg,
+    #ffffff 0%,
+    #d6b3ff 38%,
+    #9b54df 60%,
+    #2e62fa 100%
+  );
   --focus: #ffffff;
   --radius-control: 0.5rem;
   --radius-surface: 0.75rem;
@@ -40,10 +94,17 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-brand-blue: var(--brand-blue);
   --color-brand-purple: var(--brand-purple);
+  --color-brand-magenta: var(--brand-magenta);
+  --color-brand-cyan: var(--brand-cyan);
+  --color-brand-iris: var(--brand-iris);
+  --color-brand-red: var(--brand-red);
   --color-focus: var(--focus);
   --font-sans:
-    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Arial, Helvetica, sans-serif;
+    "Nexa", Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Arial, Helvetica, sans-serif;
+  --font-display:
+    "Sui Generis", "Nexa", Inter, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
   --font-mono:
     "SFMono-Regular", "Roboto Mono", Consolas, "Liberation Mono", monospace;
   --radius-control: var(--radius-control);
@@ -63,10 +124,24 @@ html {
 
 body {
   min-width: 320px;
-  font-family:
-    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
   text-rendering: geometricPrecision;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+.iris-gradient {
+  background: var(--gradient-iris);
+}
+
+.iris-text {
+  background: var(--gradient-iris);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 ::selection {

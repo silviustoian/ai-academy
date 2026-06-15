@@ -1,10 +1,10 @@
 import type { NavigationItem } from "@/types/content";
 
 export const primaryNavigation = [
-  { label: "Program", href: "#program" },
+  { label: "Academy", href: "#program" },
   { label: "Curriculum", href: "#curriculum" },
   { label: "Mentors", href: "#mentors" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Contact", href: "#contact" },
 ] satisfies NavigationItem[];
 
 export const footerNavigation = [

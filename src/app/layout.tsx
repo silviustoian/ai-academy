@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { siteConfig } from "@/data/site-config";
+import { LocaleProvider } from "@/lib/locale-context";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -22,7 +23,9 @@ export default function RootLayout({
       className="h-full scroll-smooth antialiased"
     >
       <body className="min-h-full overflow-x-clip bg-background text-foreground">
-        {children}
+        <LocaleProvider defaultLocale={siteConfig.defaultLocale}>
+          {children}
+        </LocaleProvider>
       </body>
     </html>
   );

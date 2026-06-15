@@ -1,0 +1,63 @@
+import type { LocaleCode } from "@/types/content";
+
+type HeroCopy = {
+  eyebrow: string;
+  headlineLead: string;
+  headlineAccent: string;
+  headlineTail: string;
+  subheadline: string;
+  primaryCta: string;
+  secondaryCta: string;
+  note: string;
+  vertical: string;
+  scroll: string;
+};
+
+export const heroContent: Record<LocaleCode, HeroCopy> = {
+  ro: {
+    eyebrow: "Nexinari AI Academy · Ediția 2026",
+    headlineLead: "Învață",
+    headlineAccent: "AI, Cloud și Microsoft",
+    headlineTail: "în 8 săptămâni.",
+    subheadline:
+      "De la zero la specialist. Program intensiv cu mentori din industrie, certificări Microsoft, proiecte reale și Demo Day. Doar 40 de locuri per ediție.",
+    primaryCta: "Aplică acum",
+    secondaryCta: "Vezi programul",
+    note: "Aplicația durează 2 minute. Locuri limitate.",
+    vertical: "Viitorul AI începe aici · Nexinari Academy",
+    scroll: "Scroll",
+  },
+  en: {
+    eyebrow: "Nexinari AI Academy · 2026 Cohort",
+    headlineLead: "Learn",
+    headlineAccent: "AI, Cloud and Microsoft",
+    headlineTail: "in 8 weeks.",
+    subheadline:
+      "From zero to specialist. Intensive program with industry mentors, Microsoft certifications, real-world projects and Demo Day. Only 40 seats per cohort.",
+    primaryCta: "Apply for Access",
+    secondaryCta: "Explore the Program",
+    note: "Application takes 2 minutes. Limited seats.",
+    vertical: "The Future of AI Starts Here · Nexinari Academy",
+    scroll: "Scroll",
+  },
+};
+
+export const headerNavContent: Record<LocaleCode, Array<{ label: string; href: string }>> = {
+  ro: [
+    { label: "Academia", href: "#program" },
+    { label: "Curriculum", href: "#curriculum" },
+    { label: "Mentori", href: "#mentors" },
+    { label: "Contact", href: "#contact" },
+  ],
+  en: [
+    { label: "Academy", href: "#program" },
+    { label: "Curriculum", href: "#curriculum" },
+    { label: "Mentors", href: "#mentors" },
+    { label: "Contact", href: "#contact" },
+  ],
+};
+
+export const headerCtaContent: Record<LocaleCode, string> = {
+  ro: "Aplică acum",
+  en: "Apply for Access",
+};

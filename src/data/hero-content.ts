@@ -44,16 +44,16 @@ export const heroContent: Record<LocaleCode, HeroCopy> = {
 
 export const headerNavContent: Record<LocaleCode, Array<{ label: string; href: string }>> = {
   ro: [
-    { label: "Academia", href: "#program" },
-    { label: "Curriculum", href: "#curriculum" },
+    { label: "Program", href: "#program" },
     { label: "Mentori", href: "#mentors" },
-    { label: "Contact", href: "#contact" },
+    { label: "Cum funcționează", href: "#how" },
+    { label: "Rezultate", href: "#outcomes" },
   ],
   en: [
-    { label: "Academy", href: "#program" },
-    { label: "Curriculum", href: "#curriculum" },
+    { label: "Program", href: "#program" },
     { label: "Mentors", href: "#mentors" },
-    { label: "Contact", href: "#contact" },
+    { label: "How it works", href: "#how" },
+    { label: "Outcomes", href: "#outcomes" },
   ],
 };
 

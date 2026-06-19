@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowDown, ArrowRight } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
 
@@ -189,7 +190,7 @@ export function Hero() {
             transition={{ duration: 0.55, delay: 0.3, ease: "easeOut" }}
           >
             <a
-              href="#apply"
+              href="#aplica"
               className="group relative inline-flex min-h-12 items-center justify-center gap-2 overflow-hidden rounded-full bg-white px-7 text-[12px] font-bold uppercase tracking-[0.22em] text-black shadow-[0_0_0_1px_rgba(255,255,255,0.6),0_18px_45px_-12px_rgba(214,179,255,0.85),0_0_60px_-8px_rgba(155,84,223,0.55)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_0_1px_rgba(255,255,255,0.8),0_22px_55px_-12px_rgba(214,179,255,1),0_0_70px_-6px_rgba(155,84,223,0.7)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus"
             >
               <span
@@ -202,12 +203,12 @@ export function Hero() {
                 className="relative size-4 transition group-hover:translate-x-0.5"
               />
             </a>
-            <a
-              href="#program"
+            <Link
+              href="/program"
               className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/40 bg-white/[0.04] px-7 text-[12px] font-semibold uppercase tracking-[0.22em] text-white backdrop-blur-sm transition hover:border-white hover:bg-white/[0.08] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus"
             >
               {copy.secondaryCta}
-            </a>
+            </Link>
           </motion.div>
 
           <motion.p

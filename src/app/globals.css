@@ -176,6 +176,17 @@ body {
   color: transparent;
 }
 
+/* Hollow outlined display text — editorial luxe effect for cream sections. */
+.text-stroke-dark {
+  color: transparent;
+  -webkit-text-stroke: 1.5px #0c0c10;
+}
+@media (min-width: 640px) {
+  .text-stroke-dark {
+    -webkit-text-stroke-width: 2px;
+  }
+}
+
 ::selection {
   background: rgba(242, 63, 72, 0.82);
   color: white;

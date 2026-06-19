@@ -1,11 +1,12 @@
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { ApplyForm } from "@/components/sections/ApplyForm";
+import { FAQ } from "@/components/sections/FAQ";
+import { FinalCTA } from "@/components/sections/FinalCTA";
 import { Fit } from "@/components/sections/Fit";
 import { Hero } from "@/components/sections/Hero";
 import { How } from "@/components/sections/How";
-import { Learn } from "@/components/sections/Learn";
-import { Mentors } from "@/components/sections/Mentors";
-import { Outcomes } from "@/components/sections/Outcomes";
+import { Numbers } from "@/components/sections/Numbers";
 
 export default function Home() {
   return (
@@ -14,10 +15,11 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <Fit />
-        <Learn />
-        <Mentors />
+        <Numbers />
         <How />
-        <Outcomes />
+        <FAQ />
+        <FinalCTA />
+        <ApplyForm />
       </main>
       <Footer />
     </div>

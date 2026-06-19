@@ -44,20 +44,22 @@ export const heroContent: Record<LocaleCode, HeroCopy> = {
 
 export const headerNavContent: Record<LocaleCode, Array<{ label: string; href: string }>> = {
   ro: [
-    { label: "Program", href: "#program" },
-    { label: "Mentori", href: "#mentors" },
-    { label: "Cum funcționează", href: "#how" },
-    { label: "Rezultate", href: "#outcomes" },
+    { label: "Program", href: "/program" },
+    { label: "Mentori", href: "/mentori" },
+    { label: "Rezultate", href: "/program#outcomes" },
+    { label: "FAQ", href: "/#faq" },
   ],
   en: [
-    { label: "Program", href: "#program" },
-    { label: "Mentors", href: "#mentors" },
-    { label: "How it works", href: "#how" },
-    { label: "Outcomes", href: "#outcomes" },
+    { label: "Program", href: "/program" },
+    { label: "Mentors", href: "/mentori" },
+    { label: "Outcomes", href: "/program#outcomes" },
+    { label: "FAQ", href: "/#faq" },
   ],
 };
 
 export const headerCtaContent: Record<LocaleCode, string> = {
-  ro: "Aplică acum",
-  en: "Apply for Access",
+  ro: "Aplică",
+  en: "Apply",
 };
+
+export const headerCtaHref = "/#aplica";

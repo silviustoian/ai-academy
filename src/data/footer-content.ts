@@ -1,0 +1,62 @@
+import type { LocaleCode } from "@/types/content";
+
+type FooterCopy = {
+  tagline: string;
+  navLabel: string;
+  nav: Array<{ label: string; href: string }>;
+  social: Array<{ label: string; href: string; icon: "linkedin" | "youtube" | "instagram" }>;
+  contactLabel: string;
+  email: string;
+  address: string;
+  poweredBy: string;
+  legal: string;
+};
+
+export const footerContent: Record<LocaleCode, FooterCopy> = {
+  ro: {
+    tagline:
+      "Program intensiv pentru AI, Cloud și ecosistemul Microsoft. 8 săptămâni. 40 de locuri.",
+    navLabel: "Navigare",
+    nav: [
+      { label: "Program", href: "/program" },
+      { label: "Mentori", href: "/mentori" },
+      { label: "Rezultate", href: "/program#outcomes" },
+      { label: "Cum funcționează", href: "/#how" },
+      { label: "FAQ", href: "/#faq" },
+      { label: "Aplică", href: "/#aplica" },
+    ],
+    social: [
+      { label: "LinkedIn", href: "https://linkedin.com", icon: "linkedin" },
+      { label: "YouTube", href: "https://youtube.com", icon: "youtube" },
+      { label: "Instagram", href: "https://instagram.com", icon: "instagram" },
+    ],
+    contactLabel: "Contact",
+    email: "contact@nexinari.com",
+    address: "București · România",
+    poweredBy: "Un program INARI",
+    legal: "Termeni · Confidențialitate · Cookies",
+  },
+  en: {
+    tagline:
+      "Intensive program for AI, Cloud and the Microsoft ecosystem. 8 weeks. 40 seats.",
+    navLabel: "Navigation",
+    nav: [
+      { label: "Program", href: "/program" },
+      { label: "Mentors", href: "/mentori" },
+      { label: "Outcomes", href: "/program#outcomes" },
+      { label: "How it works", href: "/#how" },
+      { label: "FAQ", href: "/#faq" },
+      { label: "Apply", href: "/#aplica" },
+    ],
+    social: [
+      { label: "LinkedIn", href: "https://linkedin.com", icon: "linkedin" },
+      { label: "YouTube", href: "https://youtube.com", icon: "youtube" },
+      { label: "Instagram", href: "https://instagram.com", icon: "instagram" },
+    ],
+    contactLabel: "Contact",
+    email: "contact@nexinari.com",
+    address: "Bucharest · Romania",
+    poweredBy: "A program by INARI",
+    legal: "Terms · Privacy · Cookies",
+  },
+};

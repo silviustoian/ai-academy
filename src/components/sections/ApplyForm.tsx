@@ -47,6 +47,7 @@ export function ApplyForm() {
     "idle",
   );
   const stepRef = useRef<HTMLDivElement>(null);
+  const transitioningRef = useRef(false);
 
   const errorMessages = useMemo(
     () =>
@@ -162,22 +163,37 @@ export function ApplyForm() {
   }
 
   function goNext() {
+    if (transitioningRef.current) return;
     if (!validateCurrentStep()) return;
     if (step < totalSteps - 1) {
+      transitioningRef.current = true;
       setDirection(1);
       setStep(step + 1);
+      // Drop guard slightly after slide animation completes
+      setTimeout(() => {
+        transitioningRef.current = false;
+      }, 450);
     }
   }
 
   function goBack() {
+    if (transitioningRef.current) return;
     if (step > 0) {
+      transitioningRef.current = true;
       setDirection(-1);
       setStep(step - 1);
+      setTimeout(() => {
+        transitioningRef.current = false;
+      }, 450);
     }
   }
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    // Block accidental submits fired during a step transition
+    if (transitioningRef.current) return;
+    // Belt-and-braces: only allow submit when actually on the last step
+    if (step !== totalSteps - 1) return;
     if (!validateCurrentStep()) return;
     setStatus("submitting");
     await new Promise((r) => setTimeout(r, 900));
@@ -319,14 +335,12 @@ export function ApplyForm() {
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.05 }}
               className="relative overflow-hidden rounded-3xl border border-black/10 bg-white shadow-[0_24px_80px_-30px_rgba(0,0,0,0.25)]"
               onKeyDown={(e) => {
-                if (
-                  e.key === "Enter" &&
-                  (e.target as HTMLElement).tagName !== "TEXTAREA" &&
-                  !isLast
-                ) {
-                  e.preventDefault();
-                  goNext();
-                }
+                if (e.key !== "Enter") return;
+                if ((e.target as HTMLElement).tagName === "TEXTAREA") return;
+                // Always prevent native form submit on Enter — user must click
+                // the Submit button explicitly on the last step.
+                e.preventDefault();
+                if (!isLast) goNext();
               }}
             >
               {/* Progress bar (iris) */}

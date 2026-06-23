@@ -9,7 +9,7 @@ type FooterCopy = {
   email: string;
   address: string;
   poweredBy: string;
-  legal: string;
+  legalLinks: Array<{ label: string; href: string }>;
 };
 
 export const footerContent: Record<LocaleCode, FooterCopy> = {
@@ -32,9 +32,13 @@ export const footerContent: Record<LocaleCode, FooterCopy> = {
     ],
     contactLabel: "Contact",
     email: "contact@nexinari.com",
-    address: "București · România",
+    address: "Timișoara · România",
     poweredBy: "Un program INARI",
-    legal: "Termeni · Confidențialitate · Cookies",
+    legalLinks: [
+      { label: "Termeni", href: "/legal/termeni" },
+      { label: "Confidențialitate", href: "/legal/confidentialitate" },
+      { label: "Cookies", href: "/legal/cookies" },
+    ],
   },
   en: {
     tagline:
@@ -55,8 +59,12 @@ export const footerContent: Record<LocaleCode, FooterCopy> = {
     ],
     contactLabel: "Contact",
     email: "contact@nexinari.com",
-    address: "Bucharest · Romania",
+    address: "Timișoara · Romania",
     poweredBy: "A program by INARI",
-    legal: "Terms · Privacy · Cookies",
+    legalLinks: [
+      { label: "Terms", href: "/legal/termeni" },
+      { label: "Privacy", href: "/legal/confidentialitate" },
+      { label: "Cookies", href: "/legal/cookies" },
+    ],
   },
 };

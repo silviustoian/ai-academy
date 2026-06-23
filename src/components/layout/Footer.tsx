@@ -165,10 +165,23 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-white/8 pt-6 text-[12px] text-white/45 sm:mt-14 sm:flex-row sm:items-center">
-          <p>
-            © {currentYear} {siteConfig.shortName}. {copy.legal}
-          </p>
+        <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-white/8 pt-6 text-[12px] text-white/45 sm:mt-14 sm:flex-row sm:items-center">
+          <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+            <span>© {currentYear} {siteConfig.shortName}.</span>
+            {copy.legalLinks.map((link, idx) => (
+              <span key={link.href} className="inline-flex items-center gap-2">
+                {idx > 0 ? (
+                  <span aria-hidden className="text-white/25">·</span>
+                ) : null}
+                <a
+                  href={link.href}
+                  className="text-white/55 transition hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus"
+                >
+                  {link.label}
+                </a>
+              </span>
+            ))}
+          </div>
           <p className="text-[10px] uppercase tracking-[0.32em]">
             NEXINARI AI Academy · {locale === "ro" ? "Ediția" : "Cohort"} 2026
           </p>

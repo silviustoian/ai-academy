@@ -21,8 +21,8 @@ export const programPageContent: Record<LocaleCode, SubpageCopy> = {
       "Patru piloni pe ecosistemul Microsoft, livrați în 8 săptămâni intensive. Începi cu fundamente, termini cu un proiect real prezentat la Demo Day.",
     next: {
       label: "Pasul următor",
-      title: "Cunoaște mentorii",
-      href: "/mentori",
+      title: "Aplică acum",
+      href: "/#aplica",
     },
   },
   en: {
@@ -33,8 +33,8 @@ export const programPageContent: Record<LocaleCode, SubpageCopy> = {
       "Four pillars across the Microsoft ecosystem, delivered in 8 intensive weeks. You start from fundamentals and finish with a real project at Demo Day.",
     next: {
       label: "Next step",
-      title: "Meet the mentors",
-      href: "/mentori",
+      title: "Apply now",
+      href: "/#aplica",
     },
   },
 };

@@ -19,7 +19,6 @@ export const footerContent: Record<LocaleCode, FooterCopy> = {
     navLabel: "Navigare",
     nav: [
       { label: "Program", href: "/program" },
-      { label: "Mentori", href: "/mentori" },
       { label: "Rezultate", href: "/program#outcomes" },
       { label: "Cum funcționează", href: "/#how" },
       { label: "FAQ", href: "/#faq" },
@@ -42,7 +41,6 @@ export const footerContent: Record<LocaleCode, FooterCopy> = {
     navLabel: "Navigation",
     nav: [
       { label: "Program", href: "/program" },
-      { label: "Mentors", href: "/mentori" },
       { label: "Outcomes", href: "/program#outcomes" },
       { label: "How it works", href: "/#how" },
       { label: "FAQ", href: "/#faq" },

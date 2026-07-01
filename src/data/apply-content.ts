@@ -33,7 +33,7 @@ export const applyContent: Record<LocaleCode, ApplyCopy> = {
     titleAccent: "NEXINARI AI Academy.",
     intro:
       "Completează formularul de mai jos.",
-    duration: "2 min · Răspuns în 48h",
+    duration: "Aplicare rapidă în 2 minute",
     sections: [
       {
         label: "Informații personale",
@@ -184,7 +184,7 @@ export const applyContent: Record<LocaleCode, ApplyCopy> = {
       },
     ],
     submitLabel: "Trimite aplicația",
-    submitNote: "Răspundem în maxim 48h",
+    submitNote: "Îți răspundem curând",
     privacyNote:
       "Prin trimiterea formularului ești de acord cu prelucrarea datelor conform politicii de confidențialitate NEXINARI.",
   },
@@ -194,7 +194,7 @@ export const applyContent: Record<LocaleCode, ApplyCopy> = {
     titleAccent: "NEXINARI AI Academy.",
     intro:
       "Fill the form below.",
-    duration: "2 min · Reply in 48h",
+    duration: "Quick 2-minute application",
     sections: [
       {
         label: "Personal info",
@@ -345,7 +345,7 @@ export const applyContent: Record<LocaleCode, ApplyCopy> = {
       },
     ],
     submitLabel: "Send application",
-    submitNote: "We reply within 48h",
+    submitNote: "We'll get back to you soon",
     privacyNote:
       "By submitting this form you agree to data processing under the NEXINARI privacy policy.",
   },

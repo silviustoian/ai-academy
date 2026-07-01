@@ -34,8 +34,8 @@ export const howContent: Record<LocaleCode, HowCopy> = {
         key: "confirm",
         label: "Pasul 2",
         title: "Primești confirmarea",
-        body: "Răspuns în max. 48h. Ghid de pregătire, acces la comunitate, calendar complet al programului.",
-        meta: "≤ 48h",
+        body: "Îți trimitem ghidul de pregătire, accesul la comunitate și calendarul complet al programului.",
+        meta: "Confirmare",
       },
       {
         key: "start",
@@ -64,8 +64,8 @@ export const howContent: Record<LocaleCode, HowCopy> = {
         key: "confirm",
         label: "Step 2",
         title: "Get confirmed",
-        body: "Reply within 48h. Prep guide, community access, full program calendar.",
-        meta: "≤ 48h",
+        body: "We follow up with the prep guide, community access and the full program calendar.",
+        meta: "Confirmation",
       },
       {
         key: "start",

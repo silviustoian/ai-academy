@@ -9,15 +9,11 @@ type FinalCtaCopy = {
   ctaLabel: string;
   ctaNote: string;
   seatsLeft: string;
-  testimonial: {
-    quote: string;
-    author: string;
-  };
 };
 
 export const finalCtaContent: Record<LocaleCode, FinalCtaCopy> = {
   ro: {
-    eyebrow: "Secțiunea 10 · Aplicăm",
+    eyebrow: "Aplicăm",
     title: "Locurile se ocupă.",
     titleAccent: "Nu aștepta.",
     copy:
@@ -25,15 +21,11 @@ export const finalCtaContent: Record<LocaleCode, FinalCtaCopy> = {
     copyAccent:
       "Sau poți să mai aștepți. Să începi încă un curs online. Să te întrebi „de unde să încep?” peste încă 6 luni.",
     ctaLabel: "Aplică acum",
-    ctaNote: "Aplicația durează 2 minute · Locuri limitate · 40 / ediție",
-    seatsLeft: "Mai sunt 23 de locuri disponibile pentru cohorta 2026",
-    testimonial: {
-      quote: "A fost cea mai bună investiție în mine.",
-      author: "Absolvent · Ediția 1",
-    },
+    ctaNote: "Aplicarea durează 2 minute · Locuri limitate · 40 / Program",
+    seatsLeft: "Mai sunt 23 de locuri disponibile pentru Programul 2027",
   },
   en: {
-    eyebrow: "Section 10 · Apply",
+    eyebrow: "Apply",
     title: "Seats are filling.",
     titleAccent: "Don't wait.",
     copy:
@@ -41,11 +33,7 @@ export const finalCtaContent: Record<LocaleCode, FinalCtaCopy> = {
     copyAccent:
       "Or you can keep waiting. Start one more online course. Ask yourself „where do I begin?” 6 months from now.",
     ctaLabel: "Apply now",
-    ctaNote: "Application takes 2 minutes · Limited seats · 40 / cohort",
-    seatsLeft: "23 seats left for the 2026 cohort",
-    testimonial: {
-      quote: "It was the best investment I made in myself.",
-      author: "Graduate · Cohort 1",
-    },
+    ctaNote: "Application takes 2 minutes · Limited seats · 40 / Program",
+    seatsLeft: "23 seats left for the 2027 Program",
   },
 };

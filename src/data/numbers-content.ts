@@ -18,7 +18,7 @@ type NumbersCopy = {
 
 export const numbersContent: Record<LocaleCode, NumbersCopy> = {
   ro: {
-    eyebrow: "Secțiunea 04 · Cifrele care contează",
+    eyebrow: "Cifrele care contează",
     title: "De ce acum. De ce Microsoft.",
     titleAccent: "De ce NEXINARI.",
     intro:
@@ -65,7 +65,7 @@ export const numbersContent: Record<LocaleCode, NumbersCopy> = {
     ],
   },
   en: {
-    eyebrow: "Section 04 · Numbers that matter",
+    eyebrow: "Numbers that matter",
     title: "Why now. Why Microsoft.",
     titleAccent: "Why NEXINARI.",
     intro:
@@ -101,7 +101,7 @@ export const numbersContent: Record<LocaleCode, NumbersCopy> = {
         key: "seats",
         value: 40,
         suffix: "",
-        label: "Seats per cohort · closed group",
+        label: "Seats per Program · closed group",
       },
       {
         key: "mentors",

@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, Quote, Users } from "lucide-react";
+import { ArrowRight, Users } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
 import Image from "next/image";
 
@@ -140,26 +140,6 @@ export function FinalCTA() {
             </p>
           </motion.div>
 
-          {/* Testimonial */}
-          <motion.figure
-            className="mx-auto mt-12 max-w-md rounded-2xl border border-white/12 bg-white/[0.03] p-5 backdrop-blur-sm sm:mt-14 sm:p-6"
-            initial={{ opacity: 0, y: reduceMotion ? 0 : 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
-          >
-            <Quote
-              aria-hidden
-              className="mx-auto size-4 text-white/40"
-              strokeWidth={2}
-            />
-            <blockquote className="mt-2 font-display text-[18px] font-black uppercase tracking-[-0.01em] text-white sm:text-[20px]">
-              &ldquo;{copy.testimonial.quote}&rdquo;
-            </blockquote>
-            <figcaption className="mt-3 text-[11px] uppercase tracking-[0.28em] text-white/55">
-              {copy.testimonial.author}
-            </figcaption>
-          </motion.figure>
         </motion.div>
       </Container>
     </section>

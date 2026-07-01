@@ -15,7 +15,7 @@ type ProblemCopy = {
 
 export const problemContent: Record<LocaleCode, ProblemCopy> = {
   ro: {
-    eyebrow: "Secțiunea 02 · Problema",
+    eyebrow: "Problema",
     title: "Sună cunoscut?",
     items: [
       {
@@ -28,7 +28,7 @@ export const problemContent: Record<LocaleCode, ProblemCopy> = {
       },
       {
         quote: "Vreau să intru în AI / Cloud, dar nu știu de unde să încep.",
-        body: "Oferta de cursuri e copleșitoare. AI, ML, Azure, AWS, Python, Power BI — pe care să-l alegi? Ce e relevant? Ce te angajează?",
+        body: "Oferta de cursuri e copleșitoare. AI, ML, Azure, AWS, Python, Power BI, pe care să-l alegi? Ce e relevant? Ce te angajează?",
       },
       {
         quote: "Sunt PM / analist / BA și simt că AI-ul mi-a luat-o înainte.",
@@ -41,12 +41,12 @@ export const problemContent: Record<LocaleCode, ProblemCopy> = {
       "construiești proiecte reale pe care le pui în CV.",
   },
   en: {
-    eyebrow: "Section 02 · The Problem",
+    eyebrow: "The Problem",
     title: "Sound familiar?",
     items: [
       {
         quote: "I finished college, but I can't actually do anything in practice.",
-        body: "University theory doesn't prepare you for real projects. Companies want experience — you only have a diploma.",
+        body: "University theory doesn't prepare you for real projects. Companies want experience, you only have a diploma.",
       },
       {
         quote: "I started 5 online courses. I never finished any of them.",
@@ -54,7 +54,7 @@ export const problemContent: Record<LocaleCode, ProblemCopy> = {
       },
       {
         quote: "I want to get into AI / Cloud, but I don't know where to start.",
-        body: "The offer is overwhelming. AI, ML, Azure, AWS, Python, Power BI — which one do you pick? What's relevant? What gets you hired?",
+        body: "The offer is overwhelming. AI, ML, Azure, AWS, Python, Power BI, which one do you pick? What's relevant? What gets you hired?",
       },
       {
         quote: "I'm a PM / analyst / BA and I feel AI is already ahead of me.",

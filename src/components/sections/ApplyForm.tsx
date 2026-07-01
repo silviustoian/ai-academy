@@ -98,7 +98,7 @@ export function ApplyForm() {
     {
       key: "reply",
       icon: Mail,
-      label: locale === "ro" ? "Răspuns în 48h" : "Reply in 48h",
+      label: locale === "ro" ? "Îți răspundem curând" : "We'll get back to you",
     },
     {
       key: "privacy",
@@ -246,10 +246,14 @@ export function ApplyForm() {
               height={28}
               className="h-6 w-auto"
             />
-            <span aria-hidden className="h-px w-10 bg-black/20" />
-            <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-black/55">
-              {copy.eyebrow}
-            </p>
+            {copy.eyebrow ? (
+              <>
+                <span aria-hidden className="h-px w-10 bg-black/20" />
+                <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-black/55">
+                  {copy.eyebrow}
+                </p>
+              </>
+            ) : null}
           </div>
 
           <h2
@@ -316,8 +320,8 @@ export function ApplyForm() {
               </h3>
               <p className="mx-auto mt-3 max-w-md text-[15px] leading-7 text-black/70 sm:text-base sm:leading-8">
                 {locale === "ro"
-                  ? "Îți mulțumim. Echipa NEXINARI revine în maxim 48h cu detalii complete despre preț, calendar și pașii următori."
-                  : "Thank you. The NEXINARI team will get back to you within 48h with full details on pricing, calendar and next steps."}
+                  ? "Îți mulțumim. Echipa NEXINARI revine cu detalii complete despre preț, calendar și pașii următori."
+                  : "Thank you. The NEXINARI team will get back to you with full details on pricing, calendar and next steps."}
               </p>
               <p className="mt-6 text-[11px] uppercase tracking-[0.28em] text-black/45">
                 {locale === "ro"
@@ -439,7 +443,7 @@ export function ApplyForm() {
                                 </span>
                               ) : f.optional ? (
                                 <span className="text-[10px] font-normal lowercase tracking-normal text-black/35">
-                                  — {locale === "ro" ? "opțional" : "optional"}
+                                  ({locale === "ro" ? "opțional" : "optional"})
                                 </span>
                               ) : null}
                             </label>

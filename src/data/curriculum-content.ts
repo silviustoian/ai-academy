@@ -32,11 +32,11 @@ type CurriculumCopy = {
 
 export const curriculumContent: Record<LocaleCode, CurriculumCopy> = {
   ro: {
-    eyebrow: "Secțiunea 05 · Curriculum",
+    eyebrow: "Curriculum",
     title: "De la fundamente la proiect real.",
     titleAccent: "Săptămână cu săptămână.",
     intro:
-      "Program intensiv de 8 săptămâni, structurat pe 5 etape — fiecare cu certificări Microsoft, hands-on real și aplicabil imediat la job.",
+      "Program intensiv de 8 săptămâni, structurat pe 5 etape, fiecare cu certificări Microsoft, hands-on real și aplicabil imediat la job.",
     phasesLabel: "Parcurs",
     phases: [
       {
@@ -86,7 +86,7 @@ export const curriculumContent: Record<LocaleCode, CurriculumCopy> = {
           "Lucrezi în echipă la un proiect real. Aplici tot ce ai învățat: AI, Cloud, Dynamics, Power Platform, Security. Fiecare echipă are un mentor tehnic dedicat care ghidează și face code review.",
         doingLabel: "Ce faci",
         handsOn:
-          "Proiectul intră în portofoliul tău — îl pui pe CV și pe LinkedIn.",
+          "Proiectul intră în portofoliul tău, îl pui pe CV și pe LinkedIn.",
         handsOnLabel: "Rezultat",
       },
       {
@@ -103,18 +103,18 @@ export const curriculumContent: Record<LocaleCode, CurriculumCopy> = {
     ],
     statsLabel: "Total program",
     stats: [
-      { value: "~320h", label: "8 săptămâni × 5 zile × 8h" },
+      { value: "320h", label: "8 săptămâni × 5 zile × 8h" },
       { value: "4+", label: "certificări Microsoft" },
       { value: "1", label: "proiect real în portofoliu" },
       { value: "Demo Day", label: "cu invitați din industrie" },
     ],
   },
   en: {
-    eyebrow: "Section 05 · Curriculum",
+    eyebrow: "Curriculum",
     title: "From fundamentals to a real project.",
     titleAccent: "Week by week.",
     intro:
-      "An intensive 8-week program structured in 5 phases — each one with Microsoft certifications, real hands-on work, and immediate on-the-job impact.",
+      "An intensive 8-week program structured in 5 phases, each one with Microsoft certifications, real hands-on work, and immediate on-the-job impact.",
     phasesLabel: "Track",
     phases: [
       {
@@ -164,7 +164,7 @@ export const curriculumContent: Record<LocaleCode, CurriculumCopy> = {
           "You work in a team on a real-world project. You apply everything: AI, Cloud, Dynamics, Power Platform, Security. Each team has a dedicated technical mentor who guides and reviews the work.",
         doingLabel: "What you do",
         handsOn:
-          "The project goes straight into your portfolio — on your CV and LinkedIn.",
+          "The project goes straight into your portfolio, on your CV and LinkedIn.",
         handsOnLabel: "Outcome",
       },
       {
@@ -181,7 +181,7 @@ export const curriculumContent: Record<LocaleCode, CurriculumCopy> = {
     ],
     statsLabel: "Program total",
     stats: [
-      { value: "~320h", label: "8 weeks × 5 days × 8h" },
+      { value: "320h", label: "8 weeks × 5 days × 8h" },
       { value: "4+", label: "Microsoft certifications" },
       { value: "1", label: "real project in your portfolio" },
       { value: "Demo Day", label: "with industry guests" },

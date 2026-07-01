@@ -38,13 +38,13 @@ export const outcomesContent: Record<LocaleCode, OutcomesCopy> = {
     title: "Nu doar cunoștințe.",
     titleAccent: "Dovezi.",
     intro:
-      "După 8 săptămâni, pleci acasă cu rezultate concrete pe care le pui pe CV, pe LinkedIn și în orice interviu. Nu vorbe — output măsurabil.",
+      "După 8 săptămâni, pleci acasă cu rezultate concrete pe care le pui pe CV, pe LinkedIn și în orice interviu. Nu vorbe, output măsurabil.",
     outcomes: [
       {
         key: "certs",
         icon: "badge",
         title: "4+ certificări Microsoft",
-        body: "AI-900, AZ-900, PL-900, SC-900 — pregătire completă și suport pentru susținerea examenelor.",
+        body: "AI-900, AZ-900, PL-900, SC-900, pregătire completă și suport pentru susținerea examenelor.",
         proof: "Recunoscute global de angajatori",
       },
       {
@@ -98,13 +98,13 @@ export const outcomesContent: Record<LocaleCode, OutcomesCopy> = {
     title: "Not just knowledge.",
     titleAccent: "Proof.",
     intro:
-      "After 8 weeks you leave with concrete outputs you can put on your CV, LinkedIn and in any interview. Not talk — measurable results.",
+      "After 8 weeks you leave with concrete outputs you can put on your CV, LinkedIn and in any interview. Not talk, measurable results.",
     outcomes: [
       {
         key: "certs",
         icon: "badge",
         title: "4+ Microsoft certifications",
-        body: "AI-900, AZ-900, PL-900, SC-900 — full prep and support for sitting the exams.",
+        body: "AI-900, AZ-900, PL-900, SC-900, full prep and support for sitting the exams.",
         proof: "Globally recognized by employers",
       },
       {

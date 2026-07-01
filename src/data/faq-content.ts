@@ -41,7 +41,7 @@ export const faqContent: Record<LocaleCode, FaqCopy> = {
       {
         key: "price",
         q: "Cât costă programul?",
-        a: "Trimite-ne o aplicare și îți prezentăm opțiunile complete de preț — inclusiv Early Bird și plată în rate. Investiția e semnificativ sub prețul altor bootcamp-uri din Europa, iar ROI-ul se vede din prima lună de salariu în domeniu.",
+        a: "Trimite-ne o aplicare și îți prezentăm opțiunile complete de preț, inclusiv Early Bird și plată în rate. Investiția e semnificativ sub prețul altor bootcamp-uri din Europa, iar ROI-ul se vede din prima lună de salariu în domeniu.",
       },
       {
         key: "certs",
@@ -71,7 +71,7 @@ export const faqContent: Record<LocaleCode, FaqCopy> = {
       {
         key: "equipment",
         q: "Ce echipament îmi trebuie?",
-        a: "Noi vom oferi tot.",
+        a: "Îți asigurăm noi tot ce ai nevoie pe parcursul programului.",
       },
       {
         key: "payment",
@@ -106,7 +106,7 @@ export const faqContent: Record<LocaleCode, FaqCopy> = {
       {
         key: "price",
         q: "How much does the program cost?",
-        a: "Send us an application and we'll walk you through full pricing — including Early Bird and installments. The investment is significantly below other European bootcamps, and ROI shows up from your first month's salary in the field.",
+        a: "Send us an application and we'll walk you through full pricing, including Early Bird and installments. The investment is significantly below other European bootcamps, and ROI shows up from your first month's salary in the field.",
       },
       {
         key: "certs",
@@ -136,7 +136,7 @@ export const faqContent: Record<LocaleCode, FaqCopy> = {
       {
         key: "equipment",
         q: "What equipment do I need?",
-        a: "We will provide everything.",
+        a: "We provide everything you need throughout the program.",
       },
       {
         key: "payment",

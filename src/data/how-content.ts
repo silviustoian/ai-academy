@@ -27,7 +27,7 @@ export const howContent: Record<LocaleCode, HowCopy> = {
         key: "apply",
         label: "Pasul 1",
         title: "Aplică",
-        body: "Completezi formularul în 2 minute. Fără experiență tehnică — doar motivație și disponibilitate full-time.",
+        body: "Completezi formularul în 2 minute. Fără experiență tehnică, doar motivație și disponibilitate full-time.",
         meta: "2 min",
       },
       {
@@ -57,7 +57,7 @@ export const howContent: Record<LocaleCode, HowCopy> = {
         key: "apply",
         label: "Step 1",
         title: "Apply",
-        body: "Fill the form in 2 minutes. No technical background needed — just motivation and full-time availability.",
+        body: "Fill the form in 2 minutes. No technical background needed, just motivation and full-time availability.",
         meta: "2 min",
       },
       {

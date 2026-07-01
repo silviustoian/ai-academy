@@ -34,7 +34,7 @@ export const mentorsContent: Record<LocaleCode, MentorsCopy> = {
     paragraph:
       "Mentorii NEXINARI nu sunt profesori universitari. Sunt consultanți, arhitecți și developeri care lucrează zilnic cu Microsoft Azure, Dynamics 365, Power Platform și AI. Vin din companii ca BearingPoint, Avanade, Axsys și din comunitatea Microsoft MVP.",
     paragraphAccent:
-      "Fiecare mentor predă doar ce face zilnic — relevant, actual, aplicabil imediat.",
+      "Fiecare mentor predă doar ce face zilnic, relevant, actual, aplicabil imediat.",
     cardYearsLabel: "Experiență",
     cardTeachesLabel: "Predă",
     cardQuoteLabel: "De ce mentor",
@@ -93,7 +93,7 @@ export const mentorsContent: Record<LocaleCode, MentorsCopy> = {
     paragraph:
       "NEXINARI mentors aren't university professors. They are consultants, architects and developers who work every day with Microsoft Azure, Dynamics 365, Power Platform and AI. They come from companies like BearingPoint, Avanade, Axsys and from the Microsoft MVP community.",
     paragraphAccent:
-      "Every mentor only teaches what they do daily — relevant, current, immediately applicable.",
+      "Every mentor only teaches what they do daily, relevant, current, immediately applicable.",
     cardYearsLabel: "Experience",
     cardTeachesLabel: "Teaches",
     cardQuoteLabel: "Why mentor",

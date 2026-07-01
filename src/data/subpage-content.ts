@@ -45,7 +45,7 @@ export const mentorsPageContent: Record<LocaleCode, SubpageCopy> = {
     title: "Oameni care fac.",
     titleAccent: "Nu doar predau.",
     intro:
-      "Consultanți, arhitecți și developeri activi în ecosistemul Microsoft. Predau doar ce livrează zilnic — relevant, actual, aplicabil.",
+      "Consultanți, arhitecți și developeri activi în ecosistemul Microsoft. Predau doar ce livrează zilnic, relevant, actual, aplicabil.",
     next: {
       label: "Pasul următor",
       title: "Aplică acum",
@@ -57,7 +57,7 @@ export const mentorsPageContent: Record<LocaleCode, SubpageCopy> = {
     title: "People who do.",
     titleAccent: "Not just teach.",
     intro:
-      "Consultants, architects and developers active in the Microsoft ecosystem. They only teach what they ship daily — relevant, current, applicable.",
+      "Consultants, architects and developers active in the Microsoft ecosystem. They only teach what they ship daily, relevant, current, applicable.",
     next: {
       label: "Next step",
       title: "Apply now",

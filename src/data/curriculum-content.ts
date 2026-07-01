@@ -36,7 +36,7 @@ export const curriculumContent: Record<LocaleCode, CurriculumCopy> = {
     title: "De la fundamente la proiect real.",
     titleAccent: "Săptămână cu săptămână.",
     intro:
-      "Program intensiv de 8 săptămâni, structurat pe 5 etape — fiecare cu certificări Microsoft, hands-on real și aplicabil imediat la job.",
+      "Program intensiv de 8 săptămâni, structurat pe 5 etape, fiecare cu certificări Microsoft, hands-on real și aplicabil imediat la job.",
     phasesLabel: "Parcurs",
     phases: [
       {
@@ -86,7 +86,7 @@ export const curriculumContent: Record<LocaleCode, CurriculumCopy> = {
           "Lucrezi în echipă la un proiect real. Aplici tot ce ai învățat: AI, Cloud, Dynamics, Power Platform, Security. Fiecare echipă are un mentor tehnic dedicat care ghidează și face code review.",
         doingLabel: "Ce faci",
         handsOn:
-          "Proiectul intră în portofoliul tău — îl pui pe CV și pe LinkedIn.",
+          "Proiectul intră în portofoliul tău, îl pui pe CV și pe LinkedIn.",
         handsOnLabel: "Rezultat",
       },
       {
@@ -114,7 +114,7 @@ export const curriculumContent: Record<LocaleCode, CurriculumCopy> = {
     title: "From fundamentals to a real project.",
     titleAccent: "Week by week.",
     intro:
-      "An intensive 8-week program structured in 5 phases — each one with Microsoft certifications, real hands-on work, and immediate on-the-job impact.",
+      "An intensive 8-week program structured in 5 phases, each one with Microsoft certifications, real hands-on work, and immediate on-the-job impact.",
     phasesLabel: "Track",
     phases: [
       {
@@ -164,7 +164,7 @@ export const curriculumContent: Record<LocaleCode, CurriculumCopy> = {
           "You work in a team on a real-world project. You apply everything: AI, Cloud, Dynamics, Power Platform, Security. Each team has a dedicated technical mentor who guides and reviews the work.",
         doingLabel: "What you do",
         handsOn:
-          "The project goes straight into your portfolio — on your CV and LinkedIn.",
+          "The project goes straight into your portfolio, on your CV and LinkedIn.",
         handsOnLabel: "Outcome",
       },
       {

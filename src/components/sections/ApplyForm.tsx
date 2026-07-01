@@ -443,7 +443,7 @@ export function ApplyForm() {
                                 </span>
                               ) : f.optional ? (
                                 <span className="text-[10px] font-normal lowercase tracking-normal text-black/35">
-                                  — {locale === "ro" ? "opțional" : "optional"}
+                                  ({locale === "ro" ? "opțional" : "optional"})
                                 </span>
                               ) : null}
                             </label>

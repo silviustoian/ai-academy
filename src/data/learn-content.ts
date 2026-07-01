@@ -17,7 +17,7 @@ export const learnContent: Record<LocaleCode, LearnCopy> = {
     title: "Nu încă un curs online.",
     titleAccent: "O academie.",
     intro:
-      "Patru piloni pe ecosistemul Microsoft, livrați într-un program intensiv de 8 săptămâni — fundamente, hands-on real, proiect de echipă și Demo Day.",
+      "Patru piloni pe ecosistemul Microsoft, livrați într-un program intensiv de 8 săptămâni, fundamente, hands-on real, proiect de echipă și Demo Day.",
     tabs: {
       pillars: "Piloni",
       weeks: "Săptămâni",
@@ -28,7 +28,7 @@ export const learnContent: Record<LocaleCode, LearnCopy> = {
     title: "Not just another online course.",
     titleAccent: "An academy.",
     intro:
-      "Four pillars on the Microsoft ecosystem, delivered in an intensive 8-week program — fundamentals, real hands-on, team project and Demo Day.",
+      "Four pillars on the Microsoft ecosystem, delivered in an intensive 8-week program, fundamentals, real hands-on, team project and Demo Day.",
     tabs: {
       pillars: "Pillars",
       weeks: "Weeks",

@@ -246,10 +246,14 @@ export function ApplyForm() {
               height={28}
               className="h-6 w-auto"
             />
-            <span aria-hidden className="h-px w-10 bg-black/20" />
-            <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-black/55">
-              {copy.eyebrow}
-            </p>
+            {copy.eyebrow ? (
+              <>
+                <span aria-hidden className="h-px w-10 bg-black/20" />
+                <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-black/55">
+                  {copy.eyebrow}
+                </p>
+              </>
+            ) : null}
           </div>
 
           <h2

@@ -15,7 +15,7 @@ type ProblemCopy = {
 
 export const problemContent: Record<LocaleCode, ProblemCopy> = {
   ro: {
-    eyebrow: "Secțiunea 02 · Problema",
+    eyebrow: "Problema",
     title: "Sună cunoscut?",
     items: [
       {
@@ -41,7 +41,7 @@ export const problemContent: Record<LocaleCode, ProblemCopy> = {
       "construiești proiecte reale pe care le pui în CV.",
   },
   en: {
-    eyebrow: "Section 02 · The Problem",
+    eyebrow: "The Problem",
     title: "Sound familiar?",
     items: [
       {

@@ -22,7 +22,7 @@ type AcademyCopy = {
 
 export const academyContent: Record<LocaleCode, AcademyCopy> = {
   ro: {
-    eyebrow: "Secțiunea 03 · Ce este Nexinari",
+    eyebrow: "Ce este Nexinari",
     title: "Nu încă un curs online.",
     titleAccent: "O academie.",
     paragraphOne:
@@ -91,7 +91,7 @@ export const academyContent: Record<LocaleCode, AcademyCopy> = {
     ],
   },
   en: {
-    eyebrow: "Section 03 · What is Nexinari",
+    eyebrow: "What is Nexinari",
     title: "Not just another online course.",
     titleAccent: "An academy.",
     paragraphOne:

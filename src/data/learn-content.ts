@@ -13,7 +13,7 @@ type LearnCopy = {
 
 export const learnContent: Record<LocaleCode, LearnCopy> = {
   ro: {
-    eyebrow: "Secțiunea 03 · Ce înveți",
+    eyebrow: "Ce înveți",
     title: "Nu încă un curs online.",
     titleAccent: "O academie.",
     intro:
@@ -24,7 +24,7 @@ export const learnContent: Record<LocaleCode, LearnCopy> = {
     },
   },
   en: {
-    eyebrow: "Section 03 · What you learn",
+    eyebrow: "What you learn",
     title: "Not just another online course.",
     titleAccent: "An academy.",
     intro:

@@ -12,7 +12,7 @@ type FitCopy = {
 
 export const fitContent: Record<LocaleCode, FitCopy> = {
   ro: {
-    eyebrow: "Secțiunea 02 · Te potrivești?",
+    eyebrow: "Te potrivești?",
     title: "Două întrebări scurte.",
     titleAccent: "Un singur răspuns.",
     tabs: {
@@ -21,7 +21,7 @@ export const fitContent: Record<LocaleCode, FitCopy> = {
     },
   },
   en: {
-    eyebrow: "Section 02 · Are you a fit?",
+    eyebrow: "Are you a fit?",
     title: "Two short questions.",
     titleAccent: "One clear answer.",
     tabs: {

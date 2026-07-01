@@ -34,7 +34,7 @@ type OutcomesCopy = {
 
 export const outcomesContent: Record<LocaleCode, OutcomesCopy> = {
   ro: {
-    eyebrow: "Secțiunea 08 · Ce obții",
+    eyebrow: "Ce obții",
     title: "Nu doar cunoștințe.",
     titleAccent: "Dovezi.",
     intro:
@@ -94,7 +94,7 @@ export const outcomesContent: Record<LocaleCode, OutcomesCopy> = {
     footnote: "Tot ce primești e inclus în prețul programului. Fără add-on-uri ascunse.",
   },
   en: {
-    eyebrow: "Section 08 · What you get",
+    eyebrow: "What you get",
     title: "Not just knowledge.",
     titleAccent: "Proof.",
     intro:
@@ -147,7 +147,7 @@ export const outcomesContent: Record<LocaleCode, OutcomesCopy> = {
         key: "community",
         icon: "infinity",
         title: "Lifelong NEXINARI Alumni access",
-        body: "Closed community, future cohorts as guest or mentor, events and exclusive job board.",
+        body: "Closed community, future Programs as guest or mentor, events and exclusive job board.",
         proof: "Forever",
       },
     ],

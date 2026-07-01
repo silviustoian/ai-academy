@@ -28,11 +28,11 @@ type ApplyCopy = {
 
 export const applyContent: Record<LocaleCode, ApplyCopy> = {
   ro: {
-    eyebrow: "Aplică · 2 minute",
+    eyebrow: "",
     title: "Aplică pentru",
     titleAccent: "NEXINARI AI Academy.",
     intro:
-      "Completează formularul de mai jos. Durează ~2 minute. Te contactăm în maxim 48h cu opțiuni de preț, calendar și restul detaliilor.",
+      "Completează formularul de mai jos.",
     duration: "2 min · Răspuns în 48h",
     sections: [
       {
@@ -63,7 +63,7 @@ export const applyContent: Record<LocaleCode, ApplyCopy> = {
             key: "city",
             label: "Oraș",
             type: "text",
-            placeholder: "București",
+            placeholder: "Timișoara",
             required: true,
           },
           {
@@ -189,11 +189,11 @@ export const applyContent: Record<LocaleCode, ApplyCopy> = {
       "Prin trimiterea formularului ești de acord cu prelucrarea datelor conform politicii de confidențialitate NEXINARI.",
   },
   en: {
-    eyebrow: "Apply · 2 minutes",
+    eyebrow: "",
     title: "Apply to",
     titleAccent: "NEXINARI AI Academy.",
     intro:
-      "Fill the form below. Takes ~2 minutes. We get back to you within 48h with pricing options, calendar and the rest of the details.",
+      "Fill the form below.",
     duration: "2 min · Reply in 48h",
     sections: [
       {
@@ -224,7 +224,7 @@ export const applyContent: Record<LocaleCode, ApplyCopy> = {
             key: "city",
             label: "City",
             type: "text",
-            placeholder: "Bucharest",
+            placeholder: "Timișoara",
             required: true,
           },
           {

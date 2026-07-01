@@ -21,7 +21,7 @@ type AudienceCopy = {
 
 export const audienceContent: Record<LocaleCode, AudienceCopy> = {
   ro: {
-    eyebrow: "Secțiunea 04 · Pentru cine",
+    eyebrow: "Pentru cine",
     title: "Dacă te regăsești aici,",
     titleAccent: "programul e pentru tine.",
     profiles: [
@@ -71,7 +71,7 @@ export const audienceContent: Record<LocaleCode, AudienceCopy> = {
     ],
   },
   en: {
-    eyebrow: "Section 04 · Who it's for",
+    eyebrow: "Who it's for",
     title: "If you see yourself here,",
     titleAccent: "the program is for you.",
     profiles: [

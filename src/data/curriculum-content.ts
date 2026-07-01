@@ -32,7 +32,7 @@ type CurriculumCopy = {
 
 export const curriculumContent: Record<LocaleCode, CurriculumCopy> = {
   ro: {
-    eyebrow: "Secțiunea 05 · Curriculum",
+    eyebrow: "Curriculum",
     title: "De la fundamente la proiect real.",
     titleAccent: "Săptămână cu săptămână.",
     intro:
@@ -103,14 +103,14 @@ export const curriculumContent: Record<LocaleCode, CurriculumCopy> = {
     ],
     statsLabel: "Total program",
     stats: [
-      { value: "~320h", label: "8 săptămâni × 5 zile × 8h" },
+      { value: "320h", label: "8 săptămâni × 5 zile × 8h" },
       { value: "4+", label: "certificări Microsoft" },
       { value: "1", label: "proiect real în portofoliu" },
       { value: "Demo Day", label: "cu invitați din industrie" },
     ],
   },
   en: {
-    eyebrow: "Section 05 · Curriculum",
+    eyebrow: "Curriculum",
     title: "From fundamentals to a real project.",
     titleAccent: "Week by week.",
     intro:
@@ -181,7 +181,7 @@ export const curriculumContent: Record<LocaleCode, CurriculumCopy> = {
     ],
     statsLabel: "Program total",
     stats: [
-      { value: "~320h", label: "8 weeks × 5 days × 8h" },
+      { value: "320h", label: "8 weeks × 5 days × 8h" },
       { value: "4+", label: "Microsoft certifications" },
       { value: "1", label: "real project in your portfolio" },
       { value: "Demo Day", label: "with industry guests" },

@@ -28,7 +28,7 @@ type MentorsCopy = {
 
 export const mentorsContent: Record<LocaleCode, MentorsCopy> = {
   ro: {
-    eyebrow: "Secțiunea 06 · Mentori",
+    eyebrow: "Mentori",
     title: "Înveți de la oameni care fac,",
     titleAccent: "nu de la oameni care predau.",
     paragraph:
@@ -82,12 +82,12 @@ export const mentorsContent: Record<LocaleCode, MentorsCopy> = {
     ],
     moreLabel: "Și alți mentori din industrie",
     moreNote:
-      "Lista completă se anunță odată cu deschiderea cohortei 2026. Aplicanții acceptați primesc profilul fiecărui mentor înainte de start.",
+      "Lista completă se anunță odată cu deschiderea Programului 2027. Aplicanții acceptați primesc profilul fiecărui mentor înainte de start.",
     partnersLabel: "Provin din",
     partners: ["BearingPoint", "Avanade", "Axsys", "Microsoft MVP"],
   },
   en: {
-    eyebrow: "Section 06 · Mentors",
+    eyebrow: "Mentors",
     title: "Learn from people who do,",
     titleAccent: "not from people who teach.",
     paragraph:
@@ -141,7 +141,7 @@ export const mentorsContent: Record<LocaleCode, MentorsCopy> = {
     ],
     moreLabel: "And other mentors from the industry",
     moreNote:
-      "The full list is announced when the 2026 cohort opens. Accepted applicants receive each mentor's profile before kickoff.",
+      "The full list is announced when the 2027 Program opens. Accepted applicants receive each mentor's profile before kickoff.",
     partnersLabel: "Coming from",
     partners: ["BearingPoint", "Avanade", "Axsys", "Microsoft MVP"],
   },

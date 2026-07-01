@@ -19,7 +19,7 @@ type HowCopy = {
 
 export const howContent: Record<LocaleCode, HowCopy> = {
   ro: {
-    eyebrow: "Secțiunea 07 · Cum funcționează",
+    eyebrow: "Cum funcționează",
     title: "3 pași simpli.",
     titleAccent: "8 săptămâni de impact.",
     steps: [
@@ -40,16 +40,16 @@ export const howContent: Record<LocaleCode, HowCopy> = {
       {
         key: "start",
         label: "Pasul 3",
-        title: "Începi cohorta",
+        title: "Începi Programul",
         body: "Te alături celor 40 de participanți. Mentori, proiecte, certificări, Demo Day și rețea de alumni pe viață.",
         meta: "8 săpt.",
       },
     ],
     cta: "Aplică acum",
-    ctaNote: "Locuri limitate · Cohorta 2026",
+    ctaNote: "Locuri limitate · Programul 2027",
   },
   en: {
-    eyebrow: "Section 07 · How it works",
+    eyebrow: "How it works",
     title: "3 simple steps.",
     titleAccent: "8 weeks of impact.",
     steps: [
@@ -70,12 +70,12 @@ export const howContent: Record<LocaleCode, HowCopy> = {
       {
         key: "start",
         label: "Step 3",
-        title: "Join the cohort",
-        body: "You join the 40-person cohort. Mentors, projects, certifications, Demo Day and a lifelong alumni network.",
+        title: "Join the Program",
+        body: "You join the 40-person Program. Mentors, projects, certifications, Demo Day and a lifelong alumni network.",
         meta: "8 weeks",
       },
     ],
     cta: "Apply now",
-    ctaNote: "Limited seats · 2026 cohort",
+    ctaNote: "Limited seats · 2027 Program",
   },
 };

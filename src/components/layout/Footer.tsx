@@ -170,7 +170,7 @@ export function Footer() {
             © {currentYear} {siteConfig.shortName}. {copy.legal}
           </p>
           <p className="text-[10px] uppercase tracking-[0.32em]">
-            NEXINARI AI Academy · {locale === "ro" ? "Ediția" : "Cohort"} 2026
+            NEXINARI AI Academy · {locale === "ro" ? "Ediția" : "Program"} 2027
           </p>
         </div>
       </Container>

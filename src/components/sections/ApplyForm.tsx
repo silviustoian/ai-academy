@@ -198,18 +198,42 @@ export function ApplyForm() {
     if (!validateCurrentStep()) return;
     setStatus("submitting");
     setSubmitError(null);
+
+    // Honeypot: bots fill this hidden field; humans don't.
+    if (values.company && values.company.trim().length > 0) {
+      setStatus("success"); // silently accept, don't send
+      return;
+    }
+
+    const sheetUrl = process.env.NEXT_PUBLIC_SHEET_WEBHOOK_URL;
+
+    // If a public sheet URL is configured, post directly from the client. This
+    // is more reliable than proxying through the API route because Google Apps
+    // Script issues a 302 redirect that some serverless fetch impls handle
+    // poorly for POST bodies. Otherwise fall back to /api/apply.
+    const endpoint = sheetUrl ?? "/api/apply";
+    const contentType = sheetUrl
+      ? "text/plain;charset=utf-8"
+      : "application/json";
+
     try {
-      const res = await fetch("/api/apply", {
+      const res = await fetch(endpoint, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": contentType },
         body: JSON.stringify({ ...values, locale }),
+        mode: "cors",
+        redirect: "follow",
       });
       if (!res.ok) {
         throw new Error(`Request failed: ${res.status}`);
       }
-      const data = (await res.json()) as { ok?: boolean };
-      if (!data.ok) {
-        throw new Error("Server returned failure");
+      // Apps Script returns JSON { ok: true }; API route also returns { ok }.
+      const text = await res.text();
+      try {
+        const data = JSON.parse(text) as { ok?: boolean };
+        if (data.ok === false) throw new Error("Server returned failure");
+      } catch {
+        // Non-JSON response: as long as status was 2xx, treat as success.
       }
       setStatus("success");
     } catch (err) {

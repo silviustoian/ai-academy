@@ -80,10 +80,6 @@ export default function ThankYouPage() {
               {copy.body}
             </p>
 
-            <p className="mt-6 text-[11px] uppercase tracking-[0.28em] text-white/50">
-              {copy.note}
-            </p>
-
             <Link
               href="/"
               className="group mt-10 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/[0.04] px-5 py-3 text-[12px] font-semibold uppercase tracking-[0.22em] text-white/85 backdrop-blur transition hover:border-white/50 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus"

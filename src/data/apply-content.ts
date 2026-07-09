@@ -145,6 +145,7 @@ export const applyContent: Record<LocaleCode, ApplyCopy> = {
             type: "select",
             options: [
               "LinkedIn",
+              "Facebook",
               "YouTube",
               "Instagram",
               "Prieten",
@@ -306,6 +307,7 @@ export const applyContent: Record<LocaleCode, ApplyCopy> = {
             type: "select",
             options: [
               "LinkedIn",
+              "Facebook",
               "YouTube",
               "Instagram",
               "Friend",

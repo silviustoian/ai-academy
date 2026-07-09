@@ -19,6 +19,7 @@ import {
   useTransform,
 } from "motion/react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { useMemo, useRef, useState, type FormEvent } from "react";
 
 import { Container } from "@/components/ui/Container";
@@ -35,6 +36,7 @@ const PHONE_RX = /^[+()\d\s-]{7,}$/;
 export function ApplyForm() {
   const reduceMotion = useReducedMotion();
   const { locale } = useLocale();
+  const router = useRouter();
   const copy = applyContent[locale];
   const sections = copy.sections;
   const totalSteps = sections.length;
@@ -238,6 +240,7 @@ export function ApplyForm() {
         if (data.ok === false) throw new Error("Server returned failure");
       }
       setStatus("success");
+      router.push("/multumim");
     } catch (err) {
       console.error("Apply submit error:", err);
       setStatus("idle");

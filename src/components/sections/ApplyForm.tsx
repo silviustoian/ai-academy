@@ -207,33 +207,33 @@ export function ApplyForm() {
 
     const sheetUrl = process.env.NEXT_PUBLIC_SHEET_WEBHOOK_URL;
 
-    // If a public sheet URL is configured, post directly from the client. This
-    // is more reliable than proxying through the API route because Google Apps
-    // Script issues a 302 redirect that some serverless fetch impls handle
-    // poorly for POST bodies. Otherwise fall back to /api/apply.
-    const endpoint = sheetUrl ?? "/api/apply";
-    const contentType = sheetUrl
-      ? "text/plain;charset=utf-8"
-      : "application/json";
-
     try {
-      const res = await fetch(endpoint, {
-        method: "POST",
-        headers: { "Content-Type": contentType },
-        body: JSON.stringify({ ...values, locale }),
-        mode: "cors",
-        redirect: "follow",
-      });
-      if (!res.ok) {
-        throw new Error(`Request failed: ${res.status}`);
-      }
-      // Apps Script returns JSON { ok: true }; API route also returns { ok }.
-      const text = await res.text();
-      try {
-        const data = JSON.parse(text) as { ok?: boolean };
+      if (sheetUrl) {
+        // Fire-and-forget POST directly to the Apps Script Web App.
+        // no-cors bypasses browser CORS preflight (Apps Script quirks with 401
+        // on public deployments). The request still reaches Apps Script and
+        // writes the row; we just can't read the response body. As long as the
+        // fetch call doesn't throw, we treat it as success.
+        await fetch(sheetUrl, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify({ ...values, locale }),
+          redirect: "follow",
+          keepalive: true,
+        });
+      } else {
+        // Fallback: proxy via our API route (used in local dev without env).
+        const res = await fetch("/api/apply", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ ...values, locale }),
+        });
+        if (!res.ok) {
+          throw new Error(`Request failed: ${res.status}`);
+        }
+        const data = (await res.json()) as { ok?: boolean };
         if (data.ok === false) throw new Error("Server returned failure");
-      } catch {
-        // Non-JSON response: as long as status was 2xx, treat as success.
       }
       setStatus("success");
     } catch (err) {

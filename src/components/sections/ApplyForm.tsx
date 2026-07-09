@@ -43,6 +43,7 @@ export function ApplyForm() {
   const [direction, setDirection] = useState<1 | -1>(1);
   const [values, setValues] = useState<FormValues>({});
   const [errors, setErrors] = useState<FormErrors>({});
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [status, setStatus] = useState<"idle" | "submitting" | "success">(
     "idle",
   );
@@ -196,8 +197,30 @@ export function ApplyForm() {
     if (step !== totalSteps - 1) return;
     if (!validateCurrentStep()) return;
     setStatus("submitting");
-    await new Promise((r) => setTimeout(r, 900));
-    setStatus("success");
+    setSubmitError(null);
+    try {
+      const res = await fetch("/api/apply", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...values, locale }),
+      });
+      if (!res.ok) {
+        throw new Error(`Request failed: ${res.status}`);
+      }
+      const data = (await res.json()) as { ok?: boolean };
+      if (!data.ok) {
+        throw new Error("Server returned failure");
+      }
+      setStatus("success");
+    } catch (err) {
+      console.error("Apply submit error:", err);
+      setStatus("idle");
+      setSubmitError(
+        locale === "ro"
+          ? "A apărut o eroare. Încearcă din nou sau scrie-ne pe email."
+          : "Something went wrong. Please try again or write to us by email.",
+      );
+    }
   }
 
   const isLast = step === totalSteps - 1;
@@ -534,6 +557,36 @@ export function ApplyForm() {
                   </motion.div>
                 </AnimatePresence>
               </div>
+
+              {/* Honeypot — bots often auto-fill; humans can't see this */}
+              <div aria-hidden className="hidden">
+                <label>
+                  Company
+                  <input
+                    type="text"
+                    name="company"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={values.company ?? ""}
+                    onChange={(e) => setValue("company", e.target.value)}
+                  />
+                </label>
+              </div>
+
+              {/* Submit error banner */}
+              {submitError ? (
+                <div
+                  role="alert"
+                  className="flex items-start gap-3 border-t border-[color:var(--brand-magenta)]/30 bg-[rgba(242,63,160,0.06)] px-6 py-4 text-[13px] leading-6 text-[color:var(--brand-magenta)] sm:px-10 sm:text-[14px]"
+                >
+                  <AlertCircle
+                    className="mt-0.5 size-4 shrink-0"
+                    strokeWidth={2.2}
+                    aria-hidden
+                  />
+                  <span>{submitError}</span>
+                </div>
+              ) : null}
 
               {/* Footer actions */}
               <div className="flex items-center justify-between gap-3 border-t border-black/8 bg-[#fbfaf7] px-6 py-6 sm:px-10 sm:py-7">

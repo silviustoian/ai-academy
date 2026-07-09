@@ -210,13 +210,15 @@ export function ApplyForm() {
     try {
       if (sheetUrl) {
         // Fire-and-forget POST directly to the Apps Script Web App.
-        // no-cors bypasses browser CORS preflight (Apps Script quirks with 401
-        // on public deployments). The request still reaches Apps Script and
-        // writes the row; we just can't read the response body. As long as the
-        // fetch call doesn't throw, we treat it as success.
+        // - `no-cors` bypasses browser CORS preflight
+        // - `credentials: "omit"` strips Google session cookies so Apps Script
+        //   doesn't 401 based on the user's browser Google login state
+        // The request still reaches Apps Script and writes the row; we just
+        // can't read the response body.
         await fetch(sheetUrl, {
           method: "POST",
           mode: "no-cors",
+          credentials: "omit",
           headers: { "Content-Type": "text/plain;charset=utf-8" },
           body: JSON.stringify({ ...values, locale }),
           redirect: "follow",

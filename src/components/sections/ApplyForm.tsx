@@ -207,6 +207,34 @@ export function ApplyForm() {
       return;
     }
 
+    // Client-side dedup: if this browser already submitted this email, block.
+    // Not a security measure (localStorage is per-browser and clearable) — just
+    // saves the user an obvious mistake and prevents duplicate rows from the
+    // same session. Server-side dedup lives in the Apps Script webhook.
+    const email = (values.email ?? "").trim().toLowerCase();
+    const APPLIED_KEY = "nexinari.appliedEmails";
+    let alreadyApplied = false;
+    if (typeof window !== "undefined" && email) {
+      try {
+        const raw = window.localStorage.getItem(APPLIED_KEY);
+        const list: string[] = raw ? JSON.parse(raw) : [];
+        if (list.includes(email)) {
+          alreadyApplied = true;
+        }
+      } catch {
+        // localStorage disabled/corrupted — skip the check
+      }
+    }
+    if (alreadyApplied) {
+      setStatus("idle");
+      setSubmitError(
+        locale === "ro"
+          ? "Ai aplicat deja cu acest email. Echipa NEXINARI îți va scrie curând."
+          : "You already applied with this email. The NEXINARI team will be in touch soon.",
+      );
+      return;
+    }
+
     const sheetUrl = process.env.NEXT_PUBLIC_SHEET_WEBHOOK_URL;
 
     try {
@@ -238,6 +266,17 @@ export function ApplyForm() {
         }
         const data = (await res.json()) as { ok?: boolean };
         if (data.ok === false) throw new Error("Server returned failure");
+      }
+      // Remember this email so a resubmit from the same browser is blocked.
+      if (typeof window !== "undefined" && email) {
+        try {
+          const raw = window.localStorage.getItem(APPLIED_KEY);
+          const list: string[] = raw ? JSON.parse(raw) : [];
+          if (!list.includes(email)) list.push(email);
+          window.localStorage.setItem(APPLIED_KEY, JSON.stringify(list));
+        } catch {
+          // Ignore storage errors
+        }
       }
       setStatus("success");
       router.push("/multumim");

@@ -1,5 +1,10 @@
 import type { LocaleCode } from "@/types/content";
 
+import { romanianCities } from "./romanian-cities";
+
+const CITY_OPTIONS_RO = [...romanianCities, "Alt oraș"];
+const CITY_OPTIONS_EN = [...romanianCities, "Other city"];
+
 type Field = {
   key: string;
   label: string;
@@ -62,8 +67,8 @@ export const applyContent: Record<LocaleCode, ApplyCopy> = {
           {
             key: "city",
             label: "Oraș",
-            type: "text",
-            placeholder: "Timișoara",
+            type: "select",
+            options: CITY_OPTIONS_RO,
             required: true,
           },
           {
@@ -224,8 +229,8 @@ export const applyContent: Record<LocaleCode, ApplyCopy> = {
           {
             key: "city",
             label: "City",
-            type: "text",
-            placeholder: "Timișoara",
+            type: "select",
+            options: CITY_OPTIONS_EN,
             required: true,
           },
           {

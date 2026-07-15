@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowDown, ArrowRight } from "lucide-react";
+import { ArrowDown, ArrowRight, MapPin } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
 
 import { Container } from "@/components/ui/Container";
@@ -155,6 +155,18 @@ export function Hero() {
           >
             {copy.eyebrow}
           </motion.p>
+
+          <motion.div
+            className="mt-3 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/[0.05] px-3 py-1.5 backdrop-blur-sm"
+            initial={{ opacity: 0, y: reduceMotion ? 0 : 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.45, delay: 0.08, ease: "easeOut" }}
+          >
+            <MapPin className="size-3.5 text-white/70" strokeWidth={2} aria-hidden />
+            <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/80">
+              Timișoara · Timiș · România
+            </span>
+          </motion.div>
 
           <motion.h1
             id="hero-title"

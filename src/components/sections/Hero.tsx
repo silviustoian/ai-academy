@@ -164,7 +164,7 @@ export function Hero() {
           >
             <MapPin className="size-3.5 text-white/70" strokeWidth={2} aria-hidden />
             <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/80">
-              Timișoara · Timiș · România
+              On site · Timișoara · Timiș · România
             </span>
           </motion.div>
 

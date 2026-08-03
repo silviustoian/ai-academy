@@ -24,7 +24,13 @@ import { useMemo, useRef, useState, type FormEvent } from "react";
 
 import { Container } from "@/components/ui/Container";
 import { applyContent } from "@/data/apply-content";
+import { useCookieConsent } from "@/lib/cookie-consent";
 import { useLocale } from "@/lib/locale-context";
+import {
+  generateEventId,
+  trackLeadClient,
+  trackLeadServer,
+} from "@/lib/meta-pixel";
 
 type FormValues = Record<string, string>;
 type FormErrors = Record<string, string>;
@@ -36,6 +42,7 @@ const PHONE_RX = /^[+()\d\s-]{7,}$/;
 export function ApplyForm() {
   const reduceMotion = useReducedMotion();
   const { locale } = useLocale();
+  const { status: consentStatus } = useCookieConsent();
   const router = useRouter();
   const copy = applyContent[locale];
   const sections = copy.sections;
@@ -267,6 +274,22 @@ export function ApplyForm() {
         const data = (await res.json()) as { ok?: boolean };
         if (data.ok === false) throw new Error("Server returned failure");
       }
+      // Fire Meta Lead events — only if user granted cookie consent.
+      // Client-side pixel + server-side CAPI share the same event_id so Meta
+      // dedupes them into a single Lead conversion.
+      if (consentStatus === "granted") {
+        const eventId = generateEventId();
+        trackLeadClient(eventId);
+        void trackLeadServer({
+          eventId,
+          email,
+          phone: values.phone,
+          city: values.city,
+          clientUserAgent:
+            typeof navigator !== "undefined" ? navigator.userAgent : undefined,
+        });
+      }
+
       // Remember this email so a resubmit from the same browser is blocked.
       if (typeof window !== "undefined" && email) {
         try {

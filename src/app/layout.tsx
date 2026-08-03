@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 
+import { CookieBanner } from "@/components/CookieBanner";
+import { MetaPixel } from "@/components/MetaPixel";
 import { siteConfig } from "@/data/site-config";
+import { CookieConsentProvider } from "@/lib/cookie-consent";
 import { LocaleProvider } from "@/lib/locale-context";
 import "./globals.css";
 
@@ -23,9 +26,13 @@ export default function RootLayout({
       className="h-full scroll-smooth antialiased"
     >
       <body className="min-h-full overflow-x-clip bg-background text-foreground">
-        <LocaleProvider defaultLocale={siteConfig.defaultLocale}>
-          {children}
-        </LocaleProvider>
+        <CookieConsentProvider>
+          <LocaleProvider defaultLocale={siteConfig.defaultLocale}>
+            {children}
+            <MetaPixel />
+            <CookieBanner />
+          </LocaleProvider>
+        </CookieConsentProvider>
       </body>
     </html>
   );

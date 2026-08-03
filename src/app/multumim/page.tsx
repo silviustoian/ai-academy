@@ -4,17 +4,41 @@ import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Container } from "@/components/ui/Container";
 import { thankYouContent } from "@/data/thank-you-content";
+import { useCookieConsent } from "@/lib/cookie-consent";
 import { useLocale } from "@/lib/locale-context";
+import { generateEventId } from "@/lib/meta-pixel";
+
+const FIRED_KEY = "nexinari.completeRegistrationFired";
 
 export default function ThankYouPage() {
   const reduceMotion = useReducedMotion();
   const { locale } = useLocale();
+  const { status } = useCookieConsent();
   const copy = thankYouContent[locale];
+
+  useEffect(() => {
+    if (status !== "granted") return;
+    if (typeof window === "undefined" || !window.fbq) return;
+    if (sessionStorage.getItem(FIRED_KEY) === "1") return;
+
+    window.fbq(
+      "track",
+      "CompleteRegistration",
+      {
+        content_name: "NEXINARI apply",
+        content_category: "application",
+        status: true,
+      },
+      { eventID: generateEventId() },
+    );
+    sessionStorage.setItem(FIRED_KEY, "1");
+  }, [status]);
 
   return (
     <div className="flex min-h-dvh flex-col bg-black">
